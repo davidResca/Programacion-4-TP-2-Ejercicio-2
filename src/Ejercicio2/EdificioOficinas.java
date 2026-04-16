@@ -9,7 +9,19 @@ public class EdificioOficinas implements IEdificio {
         this.numeroOficinas = numeroOficinas;
     }
  
-    
-    // implementar método de la interfaz para que deje de tirar error x)
+    @Override
+	public double getSuperficieEdificio() {
+		return superficie;
+	}
+	
+	public int getNumeroOficinas() {
+		return numeroOficinas;
+	}
+
+	@Override
+	public String toString() {
+		return "Edificio de Oficinas -> Superficie: " + superficie + " m2 | Cantidad de Oficinas: " + numeroOficinas;
+	}
+	
 
 }
