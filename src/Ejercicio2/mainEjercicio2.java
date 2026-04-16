@@ -10,11 +10,15 @@ public class mainEjercicio2 {
     	ArrayList<IEdificio> listaEdificios = new ArrayList<IEdificio>();   
     	
     	IEdificio poliRucaChe = new Polideportivo("Ruca che", 500, 1);
+    	IEdificio poliSanMartin = new Polideportivo("San Martin", 800, 2);
+    	IEdificio poliOlimpico = new Polideportivo("Olimpico", 1200, 3);
     	IEdificio coworkBPN = new EdificioOficinas(255, 15);
     	IEdificio edificioBuilding = new EdificioOficinas(1600, 40);
 
     	
     	listaEdificios.add(poliRucaChe);
+    	listaEdificios.add(poliSanMartin);
+    	listaEdificios.add(poliOlimpico);
     	listaEdificios.add(coworkBPN);
     	listaEdificios.add(edificioBuilding);
     	
