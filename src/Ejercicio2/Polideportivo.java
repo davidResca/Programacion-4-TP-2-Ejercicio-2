@@ -12,7 +12,7 @@ public class Polideportivo implements IEdificio, IInstalacionDeportiva {
 	}
 	
     public Polideportivo(String nombre, double superficie, int tipoInstalacion) {
-    	
+    	//Agregar nuevo metodo
     	this.nombre=nombre;
     	this.superficie=superficie;
     	this.tipoInstalacion=tipoInstalacion;

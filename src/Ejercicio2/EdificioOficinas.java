@@ -4,10 +4,14 @@ public class EdificioOficinas implements IEdificio {
 	private int numeroOficinas;
     private double superficie;
 	
+    
     public EdificioOficinas(double superficie, int numeroOficinas) {
+    	//Agregar el nuevo metodo.
         this.superficie = superficie;
         this.numeroOficinas = numeroOficinas;
     }
+    
+   
  
     @Override
 	public double getSuperficieEdificio() {
