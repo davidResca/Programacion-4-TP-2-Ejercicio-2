@@ -6,6 +6,12 @@ public class EdificioOficinas implements IEdificio {
 	
     
     public EdificioOficinas(double superficie, int numeroOficinas) {
+        if (superficie < 0) {
+            throw new ExcepcionValorInvalido("La superficie no puede ser negativa");
+        }
+        if (numeroOficinas < 0) {
+            throw new ExcepcionValorInvalido("El numero de oficinas no puede ser negativo");
+        }
     	//Agregar el nuevo metodo.
         this.superficie = superficie;
         this.numeroOficinas = numeroOficinas;

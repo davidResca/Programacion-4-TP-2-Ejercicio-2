@@ -12,6 +12,9 @@ public class Polideportivo implements IEdificio, IInstalacionDeportiva {
 	}
 	
     public Polideportivo(String nombre, double superficie, int tipoInstalacion) {
+        if (superficie < 0) {
+            throw new ExcepcionValorInvalido("La superficie no puede ser negativa");
+        }
     	//Agregar nuevo metodo
     	this.nombre=nombre;
     	this.superficie=superficie;

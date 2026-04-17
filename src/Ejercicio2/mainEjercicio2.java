@@ -9,18 +9,49 @@ public class mainEjercicio2 {
     	
     	ArrayList<IEdificio> listaEdificios = new ArrayList<IEdificio>();   
     	
-    	IEdificio poliRucaChe = new Polideportivo("Ruca che", 500, 1);
-    	IEdificio poliSanMartin = new Polideportivo("San Martin", 800, 2);
-    	IEdificio poliOlimpico = new Polideportivo("Olimpico", 1200, 3);
-    	IEdificio coworkBPN = new EdificioOficinas(255, 15);
-    	IEdificio edificioBuilding = new EdificioOficinas(1600, 40);
-
+    	try {
+        	IEdificio poliRucaChe = new Polideportivo("Ruca che", 500, 1);
+        	listaEdificios.add(poliRucaChe);
+    	} catch (ExcepcionValorInvalido e) {
+    	    System.out.println(e.getMessage());
+    	}
     	
-    	listaEdificios.add(poliRucaChe);
-    	listaEdificios.add(poliSanMartin);
-    	listaEdificios.add(poliOlimpico);
-    	listaEdificios.add(coworkBPN);
-    	listaEdificios.add(edificioBuilding);
+    	try {
+        	IEdificio poliSanMartin = new Polideportivo("San Martin", 800, 2);
+        	listaEdificios.add(poliSanMartin);
+    	} catch (ExcepcionValorInvalido e) {
+    	    System.out.println(e.getMessage());
+    	}
+    	
+    	try {
+        	IEdificio poliOlimpico = new Polideportivo("Olimpico", 1200, 3);
+        	listaEdificios.add(poliOlimpico);
+    	} catch (ExcepcionValorInvalido e) {
+    	    System.out.println(e.getMessage());
+    	}
+    	
+    	try {
+        	IEdificio coworkBPN = new EdificioOficinas(255, 15);
+        	listaEdificios.add(coworkBPN);
+    	} catch (ExcepcionValorInvalido e) {
+    	    System.out.println(e.getMessage());
+    	}
+        	
+    	try {
+        	IEdificio edificioBuilding = new EdificioOficinas(1600, 40);
+        	listaEdificios.add(edificioBuilding);
+    	} catch (ExcepcionValorInvalido e) {
+    	    System.out.println(e.getMessage());
+    	}
+    	
+    	//prueba de excepciones superficies negativas
+    	try {
+    	    IEdificio poliNegativo = new Polideportivo("Negativo", -500, 1);
+    	    listaEdificios.add(poliNegativo);
+    	} catch (ExcepcionValorInvalido e) {
+    	    System.out.println(e.getMessage());
+    	}
+    	
     	
     	Iterator<IEdificio> it = listaEdificios.iterator();
         while (it.hasNext()) {
